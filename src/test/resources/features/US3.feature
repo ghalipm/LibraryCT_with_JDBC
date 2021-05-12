@@ -1,5 +1,5 @@
 Feature: Users seeing several modules
-
+  @smoke
   Scenario: students should have access to modules
 
     Given student login into library homepage
@@ -7,7 +7,7 @@ Feature: Users seeing several modules
     | Books           |
     | Borrowing Books |
 
-
+@smoke
   Scenario: librarians should have access to modules
 
     Given the user librarian is on the homepage
