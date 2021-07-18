@@ -1,5 +1,6 @@
 package com.libraryAutomation.pages;
 
+import com.libraryAutomation.utilities.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -27,6 +28,7 @@ public class DashboardPage extends BasePage {
     public List<WebElement> itemNamesWE;
 
     public int getUsersNumber() {
+        BrowserUtils.waitForVisibility(userNumbersWE, 1);
         String userNumbersText = userNumbersWE.getText();
         int userNumbersInt;
         userNumbersInt = Integer.parseInt(userNumbersText);
@@ -34,6 +36,7 @@ public class DashboardPage extends BasePage {
     }
 
     public int getBooksNumber() {
+        BrowserUtils.waitForVisibility(bookNumbersWE, 1);
         String bookNumbersText = bookNumbersWE.getText();
         int bookNumbersInt;
         bookNumbersInt = Integer.parseInt(bookNumbersText);
@@ -41,6 +44,7 @@ public class DashboardPage extends BasePage {
     }
 
     public int getBorrowedBooksNumber() {
+        BrowserUtils.waitForVisibility(borrowedBookNumbersWE, 1);
         String borrowedBookNumbersText = borrowedBookNumbersWE.getText();
         int borrowedBookNumbersInt;
         borrowedBookNumbersInt = Integer.parseInt(borrowedBookNumbersText);
